@@ -17,7 +17,7 @@ module.exports = function (req, res, connection, next) {
       console.log("INSERTED INTO ONLINE >>>>>>>>>>>>", resultInsert);
 
       // Setting cookie
-      res.cookie("user_id", hash, {  expires: new Date(Date.now() + 43_200_000), sameSite: "None", secure: true, domain: "aperegontsev.github.io" });
+      res.cookie("user_id", hash, {  expires: new Date(Date.now() + 43_200_000), sameSite: "None", secure: true, domain: ".github.io" });
       next();
     });
   } else {
