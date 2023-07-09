@@ -26,8 +26,12 @@ server.use(cors(corsOptions));
 const port = process.env.PORT || 3100;
 
 // Middleware
- server.use((req, res, next) => {
-  onlineUsers(req, res, connection, next);
+server.use((req, res, next) => {
+  if (req.originalUrl.includes("online")) {
+    onlineUsers(req, res, connection, next);
+  } else {
+    next();
+  }
 });
 
 // Подключаем mysql модуль
