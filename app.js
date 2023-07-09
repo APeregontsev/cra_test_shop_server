@@ -13,7 +13,7 @@ server.use(cookieParser());
 /*   origin: "http://localhost:3000", */
 
 const corsOptions = {
-  origin: "https://aperegontsev.github.io/cra_test_shop_front",
+  origin: "https://aperegontsev.github.io/cra_test_shop_front/",
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   preflightContinue: false,
   optionsSuccessStatus: 204,
